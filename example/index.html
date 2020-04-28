@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #wrapper {
+            margin: 50px auto;
+            width: 100%;
+            max-width: 960px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #test {
+            position: relative;
+            width: 20em;
+            height: 10em;
+            background-color: #888888;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="test">
+            <div class="flash"></div>
+        </div>
+    </div>
+    <script src="./../../dist/flashing.js"></script>
+    <script>
+        var test = new Flasher({
+          target: '#test',
+        })
+    </script>
+</body>
+</html>
