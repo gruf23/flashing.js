@@ -1,8 +1,8 @@
 {
   "name": "flashing.js",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
-  "main": "flashing.min.js",
+  "main": "flashing.js",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack-dev-server"
