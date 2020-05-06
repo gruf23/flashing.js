@@ -76,6 +76,7 @@ class Flasher {
       position: 'absolute',
       zIndex: node.style.zIndex - 1,
       boxShadow: `0 0 20px 5px ${this.color}`,
+      opacity: 0
     };
     Object.assign(styles, position);
     blinkNode.className = 'blink-node';
@@ -87,7 +88,7 @@ class Flasher {
     }, {
       duration: this.speed,
       direction: 'alternate-reverse',
-      iterations: Infinity
+      iterations: this.iterations
     })
   }
 }
