@@ -6,9 +6,10 @@ class Flasher {
 
     this.target = document.querySelectorAll(args.target);
     this.effect = args.effect ?? 'blink';
-    this.speed = args.speed ?? null;
+    this.iterations = args.iterations ?? Infinity;
+    this.timeout = args.timeout ?? false;
     this.color = args.color ?? '#ff0000';
-    this.duration = args.duration ?? 300;
+    this.speed = args.speed ?? 300;
     this.position = args.position ?? 'full-size';
     if (this.isMethodExists(`build${this.capitalize(this.effect)}`)) {
       this.target.forEach(node => this[`build${this.capitalize(this.effect)}`].call(this, node))
@@ -84,7 +85,7 @@ class Flasher {
     blinkNode.animate({
       opacity: [ 0, 1 ]
     }, {
-      duration: this.duration,
+      duration: this.speed,
       direction: 'alternate-reverse',
       iterations: Infinity
     })
